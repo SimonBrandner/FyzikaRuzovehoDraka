@@ -10,6 +10,8 @@ import { TimeComponent } from './components/time/time.component';
 import { LengthComponent } from './components/length/length.component';
 import { ConverterViewComponent } from './components/converter-view/converter-view.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { FormsModule } from '@angular/forms';
+
 
 import {
     MatCardModule,
@@ -27,7 +29,8 @@ import {
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatTabsModule
+    MatTabsModule,
+    MatFormFieldModule
 } from '@angular/material';
 
 @NgModule({
@@ -57,7 +60,9 @@ import {
         MatSelectModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatTabsModule
+        MatTabsModule,
+        MatFormFieldModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
