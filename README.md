@@ -1,6 +1,12 @@
 # FyzikaRuzovehoDraka
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+This website is part of a crazy Czech project called FyzikaRuzovehoDraka (Physics of a Pink Dragon). It's aim is to create weird units, laws and other stuff used in physics.
+
+**DISCLAIMER: DO NOT EXPECT THIS TO MAKE SENSE!**
+
+This not our only crazy project! We have other ones:
++ [Dictionary of ungrammatical Czech]()
++ [Dictionary of ungrammatical English]()
 
 ## Development server
 
@@ -9,15 +15,3 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
