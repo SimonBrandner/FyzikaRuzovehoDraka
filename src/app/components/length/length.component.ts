@@ -31,6 +31,9 @@ export class LengthComponent implements OnInit
 
     switchClicked()
     {
+        var currentLeftSelect: string = this.leftSelect;
+        var currentRightSelect: string = this.rightSelect;
+
         this.metricUnitsOnTheLeft = !this.metricUnitsOnTheLeft;
 
         if (this.metricUnitsOnTheLeft)
@@ -43,9 +46,12 @@ export class LengthComponent implements OnInit
             this.leftUnits = this.frdUnits;
             this.rightUnits = this.metricUnits;
         }
+
+        this.leftSelect = currentRightSelect;
+        this.rightSelect = currentLeftSelect;
     }
 
-    inputChanged()
+    convert()
     {
         var inputValueInMM: number;
         var output: number;

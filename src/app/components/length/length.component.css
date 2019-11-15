@@ -1,0 +1,34 @@
+.length-card-body
+{
+    justify-content: center;
+}
+
+.table
+{
+    table-layout: fixed;
+    width: 100%;
+    column-width: auto;
+}
+
+.input-fields
+{
+    width: 100%;
+    height: 100%;
+}
+
+.table-button-cell
+{
+    width: 100px;
+    align-content: center;
+    white-space:nowrap;
+}
+
+.switch-button
+{
+    width: inherit;
+}
+
+.convert-button
+{
+    width: 100%;
+}
