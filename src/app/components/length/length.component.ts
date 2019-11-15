@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 export interface unit
 {
-  value: string;
-  viewValue: string;
+    value: string;
+    viewValue: string;
 }
 
 @Component({
@@ -56,59 +56,80 @@ export class LengthComponent implements OnInit
         var inputValueInMM: number;
         var output: number;
 
-        if (this.metricUnitsOnTheLeft)
+        if (this.leftSelect == null || this.rightSelect == null || this.inputInputField == null)
         {
-            if (this.leftSelect == "mm")
+            var warning: string = "";
+
+            if (this.leftSelect == null)
             {
-                inputValueInMM = this.inputInputField;
+                warning += "You have to select the unit from which you want to convert!\n";
             }
-            else if (this.leftSelect == "cm")
+            if (this.rightSelect == null)
             {
-                inputValueInMM = this.inputInputField * 10;
+                warning += "You have to select the unit to which you want to convert!\n";
             }
-            else if (this.leftSelect == "dm")
+            if (this.inputInputField == null)
             {
-                inputValueInMM = this.inputInputField * 100;
-            }
-            else if (this.leftSelect == "m")
-            {
-                inputValueInMM = this.inputInputField * 1000;
-            }
-            else if (this.leftSelect == "km")
-            {
-                inputValueInMM = this.inputInputField * 1000000;
+                warning += "You have to input the number you want to convert!\n";
             }
 
-            output = inputValueInMM / 60;
+            alert(warning);
         }
-
         else
         {
-            inputValueInMM = this.inputInputField * 60;
+            if (this.metricUnitsOnTheLeft)
+            {
+                if (this.leftSelect == "mm")
+                {
+                    inputValueInMM = this.inputInputField;
+                }
+                else if (this.leftSelect == "cm")
+                {
+                    inputValueInMM = this.inputInputField * 10;
+                }
+                else if (this.leftSelect == "dm")
+                {
+                    inputValueInMM = this.inputInputField * 100;
+                }
+                else if (this.leftSelect == "m")
+                {
+                    inputValueInMM = this.inputInputField * 1000;
+                }
+                else if (this.leftSelect == "km")
+                {
+                    inputValueInMM = this.inputInputField * 1000000;
+                }
 
-            if (this.rightSelect == "mm")
-            {
-                output = inputValueInMM;
+                output = inputValueInMM / 60;
             }
-            else if (this.rightSelect == "cm")
+
+            else
             {
-                output = inputValueInMM / 10;
+                inputValueInMM = this.inputInputField * 60;
+
+                if (this.rightSelect == "mm")
+                {
+                    output = inputValueInMM;
+                }
+                else if (this.rightSelect == "cm")
+                {
+                    output = inputValueInMM / 10;
+                }
+                else if (this.rightSelect == "dm")
+                {
+                    output = inputValueInMM / 100;
+                }
+                else if (this.rightSelect == "m")
+                {
+                    output = inputValueInMM / 1000;
+                }
+                else if (this.rightSelect == "km")
+                {
+                    output = inputValueInMM / 1000000;
+                }
             }
-            else if (this.rightSelect == "dm")
-            {
-                output = inputValueInMM / 100;
-            }
-            else if (this.rightSelect == "m")
-            {
-                output = inputValueInMM / 1000;
-            }
-            else if (this.rightSelect == "km")
-            {
-                output = inputValueInMM / 1000000;
-            }
+            this.outputInputField = String(output);
         }
-
-        this.outputInputField = String(output);
     }
 
     constructor() { }
